@@ -1,0 +1,247 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class GambleGuess extends GuessNum{
+	
+
+	public static long Amountmoney;
+	
+	public static void main(String[] args) {
+		
+		Scanner input=new Scanner(System.in);
+		GuessNum guessingnumber=new GuessNum();
+		
+		
+		System.out.println("Enter the amount of money you want to deposit (in $): ");
+		
+		do{
+			try{// try and catch to let the user enter a number
+					Amountmoney=input.nextLong();
+						if (Amountmoney<1)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number higher than 1$ .");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number higher than 1$");
+			
+		}input.nextLine();
+		
+		}while(Amountmoney<1);// end of do while loopAmountmoney=input.nextLong();
+		
+		
+		int kammil=1;
+		
+		while (kammil==1)
+		{
+		
+		int money=1;
+		while (money>=1 && money<=Amountmoney){
+			
+			System.out.println ("Enter the amount of money you want to play with: ");
+			System.out.println ("1$ to 10$ you choose a number from 0 to 35 (amount *2)");
+			System.out.println ("10.1$ to 50$ you choose a number from 0 to 30 (amount *3)");
+			System.out.println ("50.1$ to 100$ you choose a number from 0 to 25 (amount *4)");
+			System.out.println ("100.1$ to 150$ you choose a number from 0 to 20 (amount *5)");
+			System.out.println ("150.1$ to 250$ you choose a number from 0 to 15 (amount *6)");
+			System.out.println ("250.1$ to 500$ you choose a number from 0 to 10 (amount *8)");
+			System.out.println ( "500.1$ and up you choose a number from 0 to 5 (amount *10)");
+			
+		do{
+			try{// try and catch to let the user enter a number
+					money=input.nextInt();
+						if (money<1 || money>Amountmoney)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number higher than 1$ and lower than your amount");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number higher than 1$ and lower than your amount");
+				money=0;
+			
+		}input.nextLine();
+		
+		}while(money<1 || money>Amountmoney);// end of do while loop
+		
+		 int cusmoney=1;
+
+		 
+		if (1<=money && money<=10)
+		{
+			cusmoney=1;
+		}
+		if (10<money && money<=50 )
+		{
+			cusmoney=2;
+		}
+		
+		if(50<money && money<=100)
+		{
+			cusmoney=3;
+		}
+		if (100<money && money<=150)
+		{
+			cusmoney=4;
+		}
+		if (150<money && money<=250){
+			cusmoney=5;
+		}
+		if (250<money && money<=500){
+			cusmoney=6;
+		}
+		if (500<money){
+			cusmoney=7;
+		}
+
+
+		switch (cusmoney)
+		{
+		case 1:
+			if (guessingnumber.One_to_35()==true)
+			{
+				 Amountmoney=money*2+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+			}
+			break;
+			
+		case 2:
+			if (guessingnumber.One_to_30()==true)
+			{
+				 Amountmoney=money*3+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+			}
+			break;
+		
+			
+		case 3:
+			if (guessingnumber.One_to_25()==true)
+			{
+				 Amountmoney=money*4+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+			}
+			
+			break;
+		
+			
+		case 4:
+			
+			if (guessingnumber.One_to_20()==true)
+			{
+				 Amountmoney=money*5+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+			}
+			break;
+		
+			
+		case 5:
+
+			if (guessingnumber.One_to_15()==true)
+			{
+				 Amountmoney=money*6+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+			}
+			break;
+		
+			
+		case 6:
+			if (guessingnumber.One_to_10()==true)
+			{
+				 Amountmoney=money*8+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+			}
+		
+			break;
+
+		case 7:
+			if (guessingnumber.One_to_5()==true)
+			{
+				 Amountmoney=money*10+Amountmoney;
+					
+				System.out.println("You win and your amount of money is now: "+Amountmoney);
+				System.out.println("counter before winnning "+counter);
+				counter=2;
+				System.out.println("counter after winning "+counter);
+				
+			}
+			else {
+				
+				Amountmoney=Amountmoney-money;
+				System.out.println("You lose and your amount of money is now: "+Amountmoney);
+				
+			}
+		
+			break;
+			
+		default:
+			System.out.println("Enter a number higher than 1,000 L.L");
+			break;
+		}
+		
+		System.out.println("Do you wish to continue? Your amount of money is now: "+Amountmoney);
+		System.out.println("1-Yes");
+		System.out.println("2-No");
+		
+		
+		do{
+			try{// try and catch to let the user enter a number
+					kammil=input.nextInt();
+						if (kammil!=1 && kammil!=2)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number 1 or 2");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number 1 or 2 please");
+			
+		}input.nextLine();
+		
+		}while(kammil!=1 && kammil!=2);// end of do while loop
+		if (kammil==2)
+		{
+			money=0;
+		}
+	}//while (money==1000)
+	}//end of while l kbire (continue:yes/no)	
+	}
+
+}
