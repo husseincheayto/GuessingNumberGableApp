@@ -1,0 +1,268 @@
+import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Scanner;
+
+
+
+public class GuessNum{
+
+	public static int counter=1;
+
+    Scanner input=new Scanner(System.in);
+	public boolean One_to_35() {
+		System.out.println("Choose a number between 0 and 35: ");
+		int number=1;
+		do{
+			try{// try and catch to let the user enter a number
+					number=input.nextInt();
+						if (number<0 || number>35)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number between 0 and 35");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number between 0 and 35");
+				number=100;
+				
+		}input.nextLine();
+		
+		}while(number<0 || number>35);// end of do while loop
+	
+		Random rand=new Random();
+		int randomnumber=rand.nextInt(35);
+		
+		System.out.println("The number is :"+randomnumber);
+		
+		if (number==randomnumber)
+		{
+			return true;
+		}
+		else return false;
+	}
+
+	public boolean One_to_30() {
+		
+		System.out.println("Choose a number between 0 and 30: ");
+	int number=1;
+	do{
+		try{// try and catch to let the user enter a number
+				number=input.nextInt();
+					if (number<0 || number>30)//if the user entered a wrong number
+						{
+							System.out.println("Please enter a number between 0 and 30");
+						}
+	
+	}	catch(InputMismatchException e) //if the user didn't enter a number
+	{
+			System.out.println("Enter a number between 0 and 30");
+			number=100;
+			
+	}input.nextLine();
+	
+	}while(number<0 || number>30);// end of do while loop
+
+	Random rand=new Random();
+	int randomnumber=rand.nextInt(30);
+	
+	System.out.println("The number is :"+randomnumber);
+	
+	if (number==randomnumber)
+	{
+		return true;
+	}
+	else return false;
+		
+	}
+
+	public boolean One_to_25() {
+		
+		System.out.println("Choose a number between 0 and 25: ");
+		int number=1;
+		do{
+			try{// try and catch to let the user enter a number
+					number=input.nextInt();
+						if (number<0 || number>25)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number between 0 and 25");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number between 0 and 25");
+				number=100;
+				
+		}input.nextLine();
+		
+		}while(number<0 || number>25);// end of do while loop
+	
+		Random rand=new Random();
+		int randomnumber=rand.nextInt(25);
+		
+		System.out.println("The number is :"+randomnumber);
+		
+		if (number==randomnumber)
+		{
+			return true;
+		}
+		else return false;
+		
+	}
+
+	public boolean One_to_20() {
+		
+		System.out.println("Choose a number between 0 and 20: ");
+		int number=1;
+		do{
+			try{// try and catch to let the user enter a number
+					number=input.nextInt();
+						if (number<0 || number>20)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number between 0 and 20");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number between 0 and 20");
+				number=100;
+				
+		}input.nextLine();
+		
+		}while(number<0 || number>20);// end of do while loop
+	
+		Random rand=new Random();
+		int randomnumber=rand.nextInt(20);
+		
+		System.out.println("The number is :"+randomnumber);
+		
+		if (number==randomnumber)
+		{
+			return true;
+		}
+		else return false;
+		
+		
+	}
+
+	public boolean One_to_15() {//7ot counter + ballish za3bara
+		
+		System.out.println("Choose a number between 0 and 15: ");
+		int number=1;
+		do{
+			try{// try and catch to let the user enter a number
+					number=input.nextInt();
+						if (number<0 || number>15)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number between 0 and 15");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number between 0 and 15");
+				number=100;
+				
+		}input.nextLine();
+		
+		}while(number<0 || number>15);// end of do while loop
+	
+		Random rand=new Random();
+		int randomnumber=rand.nextInt(15);
+		
+		System.out.println("The number is :"+randomnumber);
+		
+		if (number==randomnumber)
+		{
+			return true;
+		}
+		else return false;
+		
+			
+	}
+
+	public boolean One_to_10() {
+		
+		System.out.println("Choose a number between 0 and 10: ");
+		int number=1;
+		do{
+			try{// try and catch to let the user enter a number
+					number=input.nextInt();
+						if (number<0 || number>10)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number between 0 and 10");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number between 0 and 10");
+				number=100;
+				
+		}input.nextLine();
+		
+		}while(number<0 || number>10);// end of do while loop
+	
+		Random rand=new Random();
+		int randomnumber=rand.nextInt(10);
+		
+		System.out.println("The number is :"+randomnumber);
+		
+		if (number==randomnumber)
+		{
+			return true;
+		}
+		else return false;
+		
+		
+		
+	}
+
+	public boolean One_to_5() {
+		
+		
+		System.out.println("Choose a number between 0 and 5: ");
+		int number=1;
+		do{
+			try{// try and catch to let the user enter a number
+					number=input.nextInt();
+						if (number<0 || number>5)//if the user entered a wrong number
+							{
+								System.out.println("Please enter a number between 0 and 5");
+							}
+		
+		}	catch(InputMismatchException e) //if the user didn't enter a number
+		{
+				System.out.println("Enter a number between 0 and 5");
+				number=100;
+				
+		}input.nextLine();
+		
+		}while(number<0 || number>5);// end of do while loop
+	
+		
+		
+		Random rand=new Random();
+		
+		int randomnumber=rand.nextInt(5);
+		
+		if (counter<3 && randomnumber==number){
+			randomnumber=rand.nextInt(5);
+		}
+		if (counter<3 && randomnumber==number){
+			randomnumber=rand.nextInt(5);
+		}
+		if (counter<3 && randomnumber==number){
+			randomnumber=rand.nextInt(5);
+		}
+		
+		counter++;
+		System.out.println("The number is :"+randomnumber);
+	
+		if (number==randomnumber)
+		{
+			return true;
+		}
+		else return false;
+		
+	
+	}
+
+}
